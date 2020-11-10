@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 
-
+body {
+    background-color: #fcbf49;
+}
 /* todo */
 #app{
     font-family: 'Raleway', sans-serif;
@@ -32,10 +34,18 @@ input {
     margin: 20px 5px;
 }
 
+button {
+    background-color: #264653;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: none;
+    color: #fff;
+}
+
 
 /* section */
 .new-todo {
-    background-color: lightgrey;
+    background-color: #eae2b7;
     border-radius: 5px;
     width: 500px;
     padding: 20px;

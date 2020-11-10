@@ -28,15 +28,10 @@
 
         <section class='new-todo'>
             <ul class="todos">
-                <li>
-                    Fai i compiti<i class="fas fa-trash-alt"></i>
-                </li>
-                <li>
-                    Fai i compiti<i class="fas fa-trash-alt"></i>
-                </li>
-                <li>
-                    Fai i compiti<i class="fas fa-trash-alt"></i>
-                </li>
+                <li v-for='(item, index) in list'>
+                    <span>{{ list }}</span>
+                    <i class="fas fa-trash-alt"></i>
+                </li>                
             </ul>
         </section>
 

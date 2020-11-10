@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+     <!--Style  -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Todo List</title>
+
+</head>
+<body>
+
+    <div id='app'>
+
+        <header class='todo-logo flex-center'>
+            <img src="./logo-todo.png" alt="">
+        </header>
+
+        <main>
+            <input type="text" class="add-todo" placeholder="Cosa devi fare?" />
+            <button type='text'>Aggiungi</button>           
+        </main>
+
+        <section class='new-todo'>
+            <ul class="todos">
+                <li>
+                    Fai i compiti<i class="fas fa-trash-alt"></i>
+                </li>
+                <li>
+                    Fai i compiti<i class="fas fa-trash-alt"></i>
+                </li>
+                <li>
+                    Fai i compiti<i class="fas fa-trash-alt"></i>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

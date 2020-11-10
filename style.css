@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* todo */
+#app{
+    font-family: 'Raleway', sans-serif;
+    width: 1170px;
+    height: 100vh;
+    margin: 0 auto;
+    
+}
+
+.todo-logo {
+    display: flex;
+    justify-content: center;  
+}
+
+.todo-logo img{
+    width: 35%;
+    padding: 30px;
+}
+
+main { 
+    text-align: center;
+}
+
+input {
+    margin: 20px 5px;
+}
+
+
+/* section */
+.new-todo {
+    background-color: lightgrey;
+    border-radius: 5px;
+    width: 500px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.new-todo ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #555;
+}

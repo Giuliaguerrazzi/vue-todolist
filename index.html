@@ -22,15 +22,15 @@
         </header>
 
         <main>
-            <input type="text" class="add-todo" placeholder="Cosa devi fare?" />
-            <button type='text'>Aggiungi</button>           
+            <input v-model="newTodo" @keyup.enter="addNewTodo"  type="text" class="add-todo" placeholder="Cosa devi fare?" />
+            <button @click="addNewTodo" type='text'>Aggiungi</button>           
         </main>
 
         <section class='new-todo'>
             <ul class="todos">
-                <li v-for='(item, index) in list'>
-                    <span>{{ list }}</span>
-                    <i class="fas fa-trash-alt"></i>
+                <li v-for='item in list'>
+                    <span>{{ item }}</span>
+                    <i @click="removeTodo" class="fas fa-trash-alt"></i>
                 </li>                
             </ul>
         </section>

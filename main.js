@@ -2,10 +2,16 @@ const app = new Vue({
     el: '#app',
     data: {
         newTodo: '',
-        list: [
-            'Fare la spesa',
-            'Fare i compiti',
-            'Comprare il pane',
+        list: [ {
+            nome: 'fare la spesa',
+        },
+        {
+            nome: 'fare i compiti',
+        },
+        {
+            nome: 'comprare il pane',
+        },
+
         ],
 
         emptyList: false,
@@ -13,7 +19,9 @@ const app = new Vue({
     methods: {
         addNewTodo() {
             if (this.newTodo.trim() !== '') {
-                this.list.push(this.newTodo);
+                this.list.push(
+                    {nome: this.newTodo}
+                    );
 
                 this.newTodo = '';
             }

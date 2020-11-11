@@ -33,19 +33,24 @@ main {
 main i {
     color: #264653;
     font-size: 20px;
-    animation: float 2s infinite;
+    animation: rotate-scale 0.5s linear both;
+    
 }
 
-@keyframes float {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-  
+@keyframes rotate-scale {
+    0% {
+        transform: scale(1) rotate(0);
+       }
+
     50% {
-      transform: translateY(-10px);
-    }
-  }
+        transform: scale(2) rotate(180deg);
+    }  
+    100% {
+        transform: scale(1) rotate(360deg);
+      }
+}
+
+
 
 input {
     margin: 20px 5px;
@@ -57,10 +62,15 @@ button {
     background-color: #264653;
     padding: 10px;
     border-radius: 20px;
-    box-shadow: none;
+    border: 1px solid transparent;
+    box-shadow: 0 8px 6px -6px black;
     color: #fff;
     cursor: pointer;
     margin-left: 5px;
+}
+
+button:hover {
+    background-color:#e63946;
 }
 
 
@@ -80,13 +90,16 @@ button {
     border-bottom: 1px solid #555;
 }
 
+.new-todo span::first-letter {
+    text-transform: uppercase;
+}
+
 .new-todo ul li i {
     cursor: pointer;
 }
 
 .new-todo ul li i:hover {
-    color: red;
-    
+    color: #e63946;    
 }
 
 

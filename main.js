@@ -1,4 +1,3 @@
-
 const app = new Vue({
     el: '#app',
     data: {
@@ -7,12 +6,25 @@ const app = new Vue({
             'Fare la spesa',
             'Fare i compiti',
             'Comprare il pane',
-        ]
+        ],
+
+        emptyList: false,
     },
     methods: {
         addNewTodo() {
-            this.list.push(this.newTodo)
+            if (this.newTodo.trim() !== '') {
+                this.list.push(this.newTodo);
+
+                this.newTodo = '';
+            }
+            
         },
+        removeTodo(index) {
+            this.list.splice(index, 1);
+            if(this.list[index] == 0){
+                this.emptyList = true
+              }
+          },
     }
 
 });

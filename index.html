@@ -28,9 +28,10 @@
 
         <section class='new-todo'>
             <ul class="todos">
-                <li v-for='item in list'>
+                <li v-show="emptyList">La lista è vuota. Inserisci un todo</li>
+                <li v-for='(item, index) in list'>
                     <span>{{ item }}</span>
-                    <i @click="removeTodo" class="fas fa-trash-alt"></i>
+                    <i @click="removeTodo(index)" class="fas fa-trash-alt"></i>
                 </li>                
             </ul>
         </section>

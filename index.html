@@ -21,17 +21,25 @@
             <img src="./logo-todo.png" alt="">
         </header>
 
-        <main>            
+        <main>
+
             <input v-model="newTodo" @keyup.enter="addNewTodo"  type="text" class="add-todo" placeholder="Cosa devi fare?" />
+
             <i class="fas fa-pencil-alt"></i>
-            <button @click="addNewTodo" type='text'>Aggiungi</button>           
+
+            <button @click="addNewTodo" type='text'>Aggiungi</button>
+                       
         </main>
 
         <section class='new-todo'>
+
             <ul class="todos">
+                
                 <li v-show="emptyList">La lista è vuota. Inserisci un todo</li>
+
                 <li v-for='(item, index) in list'>
-                    <span>{{ item }}</span>
+
+                    <span :class="list[index].done" @click='doneTodo(index)'>{{ item.nome }}</span>
                     <i @click="removeTodo(index)" class="fas fa-trash-alt"></i>
                 </li>                
             </ul>

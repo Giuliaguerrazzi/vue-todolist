@@ -4,12 +4,15 @@ const app = new Vue({
         newTodo: '',
         list: [ {
             nome: 'fare la spesa',
+            done: '',
         },
         {
             nome: 'fare i compiti',
+            done: '',
         },
         {
             nome: 'comprare il pane',
+            done: '',
         },
 
         ],
@@ -32,7 +35,15 @@ const app = new Vue({
             if(this.list.length == 0){
                 this.emptyList = true
               }
-          },
+        },
+        doneTodo(index) {
+            if (this.list[index].done === '') {
+                this.list[index].done = 'line'
+            }
+            else {
+                this.list[index].done = null
+            }
+        }
     }
 
 });

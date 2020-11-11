@@ -94,6 +94,10 @@ button:hover {
     text-transform: uppercase;
 }
 
+.line {
+    text-decoration: line-through;
+}
+
 .new-todo ul li i {
     cursor: pointer;
 }

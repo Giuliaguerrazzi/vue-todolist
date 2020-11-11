@@ -10,7 +10,7 @@ body {
 /* todo */
 #app{
     font-family: 'Raleway', sans-serif;
-    width: 1170px;
+    max-width: 1170px;
     height: 100vh;
     margin: 0 auto;
     
@@ -22,16 +22,35 @@ body {
 }
 
 .todo-logo img{
-    width: 35%;
-    padding: 30px;
+    width: 250px;
+    padding: 10px;
 }
 
 main { 
     text-align: center;
 }
 
+main i {
+    color: #264653;
+    font-size: 20px;
+    animation: float 2s infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
 input {
     margin: 20px 5px;
+    padding: 5px 10px;
+    border-radius: 15px;
 }
 
 button {
@@ -41,6 +60,7 @@ button {
     box-shadow: none;
     color: #fff;
     cursor: pointer;
+    margin-left: 5px;
 }
 
 
@@ -48,7 +68,7 @@ button {
 .new-todo {
     background-color: #eae2b7;
     border-radius: 5px;
-    width: 500px;
+    max-width: 450px;
     padding: 20px;
     margin: 0 auto;
 }
@@ -58,4 +78,29 @@ button {
     justify-content: space-between;
     padding: 10px;
     border-bottom: 1px solid #555;
+}
+
+.new-todo ul li i {
+    cursor: pointer;
+}
+
+.new-todo ul li i:hover {
+    color: red;
+    
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 420px) {
+    
+    .new-todo {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 421px) and (max-width: 767px) {
+
+    .new-todo {
+        width: 70%;
+    }
 }

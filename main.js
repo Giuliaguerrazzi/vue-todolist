@@ -21,7 +21,7 @@ const app = new Vue({
         },
         removeTodo(index) {
             this.list.splice(index, 1);
-            if(this.list[index] == 0){
+            if(this.list.length == 0){
                 this.emptyList = true
               }
           },
